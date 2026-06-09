@@ -3,8 +3,7 @@ const app = express();
 app.use(express.json());
 
 const VERIFY_TOKEN = 'brightflow123';
-const N8N_WEBHOOK = 'https://tradies.app.n8n.cloud/webhook/21e4b17b-1e54-4887-8c28-ddf26165303b';
-
+const N8N_WEBHOOK = 'https://tradies.app.n8n.cloud/webhook/ba6b9e67-a57d-42db-aabd-7bb459cd7442';
 app.get('/webhook', (req, res) => {
   const mode = req.query['hub.mode'];
   const token = req.query['hub.verify_token'];
