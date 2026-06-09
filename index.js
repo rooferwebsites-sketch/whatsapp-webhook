@@ -29,5 +29,10 @@ app.post('/webhook', async (req, res) => {
   }
 });
 
+setInterval(() => {
+  fetch('https://whatsapp-webhook-kblp.onrender.com/webhook')
+    .catch(() => {});
+}, 14 * 60 * 1000);
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log('Server running on port', PORT));
