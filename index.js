@@ -4,6 +4,7 @@ app.use(express.json());
 
 const VERIFY_TOKEN = 'brightflow123';
 const N8N_WEBHOOK = 'https://tradies.app.n8n.cloud/webhook/ba6b9e67-a57d-42db-aabd-7bb459cd7442';
+
 app.get('/webhook', (req, res) => {
   const mode = req.query['hub.mode'];
   const token = req.query['hub.verify_token'];
@@ -29,7 +30,7 @@ app.post('/webhook', async (req, res) => {
 });
 
 setInterval(() => {
-  fetch('https://whatsapp-webhook-kblp.onrender.com/webhook')
+  fetch('https://whatsapp-webhook-production-f689.up.railway.app/webhook')
     .catch(() => {});
 }, 14 * 60 * 1000);
 
